@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta http-equiv="Pragma" contect="no-cache">
+    <meta name = "format-detection" content = "telephone=no">
+
+    <link href="../src/assets/style/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../src/assets/style/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="../src/assets/style/css/main.min.css" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+    <script src="../src/assets/script/libs/html5shiv.js"></script>
+    <script src="../src/assets/script/libs/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="index-header">
+    <div class="container">
+        <div class="hidden-xs">
+            <nav class="navbar navbar-inverse imooc-nav" role="navigation">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <img src="../src/assets/img/common/logo.png" alt="" class="imooc-logo">
+                        <ul class="nav navbar-nav nav-imooc-item">
+                            <li class="active"><a href="index.html">首页</a></li>
+                            <li><a href="page-content.html">课程</a></li>
+                            <li><a href="page-ask.html">问答</a></li>
+                            <li><a href="page-note.html">手记</a></li>
+                        </ul>
+                        <div class="imooc-right-login clearfix">
+                            <span class="imooc-login"><span class="login-text">登录</span></span>
+                            <span class="login-out">退出</span>
+                            <div class="user-msg-item">
+                                <ul>
+                                    <li><a href="#personal">个人设置</a></li>
+                                    <li><a href="#password">密码设置</a></li>
+                                    <li><a href="#myAnswer">我的回答</a></li>
+                                    <li><a href="#myAsk">我的提问</a></li>
+                                    <li><a href="#myNote">我的手记</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="visible-xs">
+            <span class="imooc-hideNav"><i class="glyphicon glyphicon-align-justify" aria-hidden="true"></i>&nbsp;<img src="../src/assets/img/common/logo.png" alt="" class="imooc-logo-xs"></span>
+            <div class="imooc-right-login clearfix">
+                <span class="imooc-login"><span class="login-text">登录</span></span>
+                <span class="login-out">退出</span>
+                <div class="user-msg-item">
+                    <ul>
+                        <li><a href="#personal">个人设置</a></li>
+                        <li><a href="#password">密码设置</a></li>
+                        <li><a href="#myAnswer">我的回答</a></li>
+                        <li><a href="#myAsk">我的提问</a></li>
+                        <li><a href="#myNote">我的手记</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="imooc-left-nav">
+                <ul class="left-nav-item">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="page-content.html">课程</a></li>
+                    <li><a href="page-ask.html">问答</a></li>
+                    <li><a href="page-note.html">手记</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="personal-content">
+    <div class="container">
+        <div class="row">
+            <div class="personal-main">
+                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+                    <div class="personal-left">
+                        <ul class="personal-nav">
+                            <li class="nav-user"><img src="./../src/assets/img/common/5.jpg" alt=""><span class="left-username"></span></li>
+                            <li><a href="#personal">个人设置</a></li>
+                            <li><a href="#password">密码设置</a></li>
+                            <li><a href="#myAnswer">我的回答</a></li>
+                            <li><a href="#myAsk">我的提问</a></li>
+                            <li><a href="#myNote">我的手记</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9">
+                    <div class="personal-right">
+                        <h3 class="right-modual" name="personal" id="personal">个人设置</h3>
+                        <div class="right-msg clearfix">
+                            <form name="msg-modify-form" id="msg-modify-form" method="post" enctype="multipart/form-data">
+                                <div class="user-img user-box clearfix">
+                                    <label class="user-label col-lg-2 col-md-2 col-sm-2 col-xs-3">我的头像:</label>
+                                    <div class="user-div-img col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-4 user-img-up">
+                                            <img src="./../src/assets/img/common/5.jpg" alt="" id="img">
+                                        </div>
+                                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8 user-img-up">
+                                            <a href="javascript:;" class="file-input">
+                                                <input type="file" name="fileimg" id="fileimg"/>选择头像
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user-name user-box clearfix">
+                                    <label class="user-label col-lg-2 col-md-2 col-sm-2 col-xs-3">我的昵称:</label>
+                                    <div class="user-div-name col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                        <input type="text" class="input-name" name="nickname">
+                                        <input type="hidden" class="old-name" name="oldname">
+                                        <span class="error-remind"></span>
+                                    </div>
+                                </div>
+                                <div class="user-gen user-box clearfix">
+                                    <label class="user-label col-lg-2 col-md-2 col-sm-2 col-xs-3">性别:</label>
+                                    <div class="user-div-sex col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                        <input type="radio" name="gender" value="male">男
+                                        <input type="radio" name="gender" value="female">女
+                                        <input type="radio" name="gender" value="secret">保密
+                                    </div>
+                                </div>
+
+                                <div class="user-sign user-box clearfix">
+                                    <label class="user-label col-lg-2 col-md-2 col-sm-2 col-xs-3">个性签名:</label>
+                                    <div class="user-div-sign col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                        <textarea name="signature" id="" rows="5" class="input-sign"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 pull-right">
+                                    <button class="msg-modify">修改</button>
+                                </div>
+                            </form>
+                            <div id="result"></div>
+                        </div>
+                        <h3 class="right-modual" name="password" id="password">密码设置</h3>
+                        <div class="right-pwd clearfix">
+                            <div class="form-password">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label class="pass-label col-lg-2 col-md-2 col-sm-2 col-xs-3">原密码:</label>
+                                    <input type="password" value="" class="col-lg-3 col-md-3 col-sm-3 col-xs-8 old-pass" >
+                                    <span class="col-lg-6 col-md-6 col-sm-6 col-xs-12 error-remind remind-o"></span>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label class="pass-label col-lg-2 col-md-2 col-sm-2 col-xs-3">新密码:</label>
+                                    <input type="password" value="" class="col-lg-3 col-md-3 col-sm-3 col-xs-8 new-pass">
+                                    <span class="col-lg-6 col-md-6 col-sm-6 col-xs-12 error-remind remind-p"></span>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label class="pass-label col-lg-2 col-md-2 col-sm-2 col-xs-3">确认密码:</label>
+                                    <input type="password" value="" class="col-lg-3 col-md-3 col-sm-3 col-xs-8 re-pass">
+                                    <span class="col-lg-6 col-md-6 col-sm-6 col-xs-12 error-remind remind-rp"></span>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pass-btn">
+                                    <button class="col-lg-1 col-lg-offset-4 col-sm-2 col-sm-offset-3 col-xs-3 col-xs-offset-8">提交</button>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="right-modual" name="myAnswer" id="myAnswer">我的回答</h3>
+                        <div class="right-answer"></div>
+                        <h3 class="right-modual" name="myAsk" id="myAsk">我的提问</h3>
+                        <div class="right-ask"></div>
+                        <h3 class="right-modual" name="myNote" id="myNote">我的手记</h3>
+                        <div class="right-note"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="index-footer">
+    <div class="container">
+        <p class="footer-icon">
+            <a href="javascript:void(0);" class="icon-wb">
+                <i class="fa fa-weibo" aria-hidden="true"></i>
+                <span class="icon-intro">
+                    <span class="f-icon-div f-icon-wb">
+                         <img src="../src/assets/img/common/weibo.jpg" alt=""><br>
+                         <span>扫码关注微博</span>
+                         <span class="box-arrow"></span>
+                    </span>
+                </span>
+            </a>&nbsp;&nbsp;
+            <a href="javascript:void(0);" class="icon-wx">
+                <i class="fa fa-weixin" aria-hidden="true"></i>
+                <span class="icon-intro">
+                    <span class="f-icon-div f-icon-wx">
+                         <img src="../src/assets/img/common/weibo.jpg" alt=""><br>
+                         <span>扫码关注微信</span>
+                         <span class="box-arrow"></span>
+                    </span>
+                </span>
+            </a>&nbsp;&nbsp;
+            <a href="javascript:void(0);" class="icon-qq">
+                <i class="fa fa-qq" aria-hidden="true"></i>
+                <span class="icon-intro">
+                    <span class="f-icon-div f-icon-qq">
+                         <img src="../src/assets/img/common/weibo.jpg" alt=""><br>
+                         <span>扫码关注QQ</span>
+                         <span class="box-arrow"></span>
+                    </span>
+                </span>
+            </a>
+        </p>
+        <p class="footer-beian">©&nbsp;2016&nbsp;mooc.com&nbsp;&nbsp;京ICP备 13046642号-2</p>
+    </div>
+</div>
+
+
+<div class="modal fade" id="delcfmModel">
+    <div class="modal-dialog">
+        <div class="modal-content message_align">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">提示信息</h4>
+            </div>
+            <div class="modal-body">
+                <p>您确认要退出登录吗？</p>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" id="url"/>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <a class="btn btn-warning btn-loginout" data-dismiss="modal">确定</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="../src/assets/script/libs/jquery-3.1.0.min.js"></script>
+<script src="../src/assets/script/libs/bootstrap.min.js"></script>
+<script src="../src/assets/script/js/min/main.min.js"></script>
+<script src="../src/assets/script/js/min/login.min.js"></script>
+<script src="../src/assets/script/js/min/page-personal.min.js"></script>
+
+</body>
+</html>

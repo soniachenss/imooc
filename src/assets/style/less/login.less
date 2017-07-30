@@ -1,0 +1,144 @@
+.imooc-login-mask{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.6;
+  background-color: #000;
+  z-index: 10;
+}
+.imooc-login-box {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 16;
+  .imooc-login-close {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    width: 40px;
+    cursor: pointer;
+    z-index: 9;
+    @media (max-width: 768px) {
+      top: 30px;
+      right: 10px;
+      width: 20px;
+    }
+    img {
+      width: 40px;
+      @media (max-width: 768px) {
+        width: 20px;
+      }
+    }
+  }
+  .imooc-btn-login {
+    padding: 0;
+    .btn-login {
+      display: block;
+      width: 80%;
+      margin: 0 10%;
+      border: none;
+      outline: none;
+      @media (max-width: 768px) {
+        width: 100%;
+        margin: 0;
+      }
+      height: 34px;
+      line-height: 34px;
+      text-align: center;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      background-color: #ffa533;
+      z-index: 999;
+      color: #ffffff;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .form-login {
+    position: relative;
+    //top: 135px;
+    top: 50%;
+    -webkit-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
+    background-color: #fff;
+    padding: 45px 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    .form-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #999;
+    }
+    @media (max-width: 768px) {
+      padding-left: 30px;
+      top: 40px;
+      margin: 0 15px;
+      top: 10%;
+      -webkit-transform: translateY(10%);
+      -o-transform: translateY(10%);
+      transform: translateY(10%);
+    }
+    .login-choose {
+      width: 100%;
+      margin-bottom: 20px;
+      span {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      .login-options,
+      .register-options{
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .login-options {
+        border-bottom: 2px solid #f63;
+      }
+      .register-options {
+        border-bottom: 2px solid #e3e3e3;
+      }
+    }
+
+    .formLogin,
+    .formRegis{
+      .login-input {
+        width: 100%;
+        margin: 7px 0;
+      }
+      .imooc-btn-login {
+        .btn-login {
+          width: 100%;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+  .formRegis{
+    display: none;
+  }
+  .error-remind-username,
+  .error-remind-pass,
+  .error-remind-content{
+    min-height: 15px;
+    line-height: 1.2em;
+    color: #f63;
+  }
+}
+.login-text {
+  a{
+    color: #f63;
+  }
+}

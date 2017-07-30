@@ -1,0 +1,441 @@
+//首页头部
+.index-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  height: 50px;
+  z-index:8;
+  .imooc-nav{
+    border: none!important;
+    .imooc-logo{
+      display: block;
+      float: left;
+      margin-top: 8px;
+    }
+    .nav-imooc-item{
+      >li{
+        width: 100px;
+        margin: 0 auto;
+        >a{
+          color: #fff;
+          text-align: center;
+          &:hover{
+            background-color: #000;
+          }
+        }
+      }
+    }
+    .class-item{
+      padding: 0 10px;
+        >li{
+          width: 180px;
+          >a{
+            display: inline-block;
+            width: 50%;
+            &:hover{
+              color: #f63;
+              background-color: #fff;
+            }
+          }
+        }
+    }
+  }
+  .login-success,
+  .login-out{
+    display: none;
+    //float: right;
+    line-height: 50px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .login-success{
+    color: #f63;
+  }
+  .login-out{
+    color: #fff;
+    &:hover{
+      color: #f63;
+      cursor: pointer;
+    }
+  }
+  .imooc-right-login{
+    position: relative;
+    float: right;
+    .user-msg-item{
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      border: 1px solid #eee;
+      ul{
+        li{
+          display: inline-block;
+          padding: 10px;
+          text-align: center;
+          a{
+            color: #000;
+            &:hover{
+              color: #f63;
+            }
+          }
+        }
+      }
+    }
+  }
+  .imooc-login{
+    position: relative;
+    //float: right;
+    color: #ffffff;
+    line-height: 50px;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 0 10px;
+    &:hover{
+      background-color: #222;
+        .user-msg-item{
+          display: block;
+        }
+    }
+    img{
+      width: 35px;
+      height: 35px;
+      margin-right: 10px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+    }
+  }
+  .imooc-hideNav{
+    color: #fff;
+    font-size: 28px;
+    line-height: 50px;
+    .imooc-logo-xs{
+      margin-bottom: 10px;
+    }
+  }
+  .imooc-left-nav{
+    display: none;
+    z-index: 9;
+    position: fixed;
+    left:0;
+    top: 50px;
+    width: 30%;
+    background-color: #000;
+    //opacity: 0.8;
+   .left-nav-item{
+     padding: 15px;
+     >li{
+       font-size: 15px;
+       padding: 5px 0;
+       margin: 5px 0;
+       text-align: center;
+       a{
+         color: #fff;
+       }
+     }
+   }
+    //.class-item-list{
+    //  margin-top: 10px;
+    //  li{
+    //    font-size: 12px;
+    //    padding: 5px 0;
+    //    a{
+    //      color: #000;
+    //      display: inline-block;
+    //      width: 50%;
+    //    }
+    //  }
+    //}
+  }
+}
+
+
+//内容
+.index-content{
+  padding-top: 50px;
+  //banner图
+ .index-banner{
+   max-height: 350px;
+   .banner-img{
+     max-height: 350px;
+     width: 100%;
+   }
+}
+  //热门课程、新课推荐、免费专区
+  .index-hotclass,
+  .index-newclass,
+  .index-freeclass{
+    a{
+      text-decoration: none;
+      color: #000;
+    }
+    .class-title{
+      position: relative;
+      margin: 45px 0 20px 0;
+      font-size: 13px;
+      span{
+        a{
+          position: absolute;
+          right: 0;
+          top: 10px;
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+          &:hover{
+            color: #f63;
+          }
+        }
+      }
+    }
+    .list-class-box{
+      .hover-line{
+        height: 3px;
+        width: 0px;
+        margin: -10px 0 10px;
+        background: #ff6633;
+        -webkit-transition: all 0.8s ease;
+        -moz-transition: all 0.8s ease;
+        -o-transition: all 0.8s ease;
+        transition: all 0.8s ease;
+      }
+      .class-box{
+        position: relative;
+        margin-bottom: 10px;
+        cursor: pointer;
+        border: 1px solid #e3e3e3;
+        padding-bottom: 5px;
+        .class-box-img{
+          width: 100%;
+          overflow: hidden;
+          img{
+            display: block;
+            width: 100%;
+            height: 157px;
+            @media (max-width: 768px) {
+              height: 100px;
+            }
+            border: none;
+            -webkit-transition: all 0.8s ease;
+            -moz-transition: all 0.8s ease;
+            -o-transition: all 0.8s ease;
+            transition: all 0.8s ease;
+          }
+        }
+        .class-title{
+          position: absolute;
+          bottom: 55px;
+          height: 45px;
+          left: 0;
+          right: 0;
+          background-color: #000;
+          opacity: 0.5;
+          margin-bottom: 0;
+          max-height: 37px;
+          padding: 5px 10px;
+          line-height: 1.2em;
+          color: #fff;
+          font-size: 13px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          @media (max-width: 768px) {
+            bottom: 53px;
+            padding: 0 10px;
+            height: 25px;
+            line-height: 2em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+          }
+        }
+        .class-intro{
+          padding: 10px 10px;
+          color: #2a2d44;
+          height: 25px;
+          font-size: 13px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          @media (max-width: 768px) {
+            padding: 0 10px;
+            height: 23px;
+            line-height: 2em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+          }
+        }
+        .class-price{
+          padding: 5px 10px;
+          height: 25px;
+          color: #9DA3AE;
+          .price{
+            float: left;
+            color: #f63;
+          }
+          .free-price{
+            float: left;
+            color: #70d445;
+          }
+          .number{
+            float: right;
+          }
+        }
+      }
+      &:hover{
+        img{
+          transform: scale(1.1, 1.1);
+          -webkit-transform: scale(1.1, 1.1);
+          -moz-transform: scale(1.1, 1.1);
+          -ms-transform: scale(1.1, 1.1);
+          -webkit-transform-origin: 50% 100%;
+          -moz-transform-origin: 50% 100%;
+          -ms-transform-origin: 50% 100%;
+          -o-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+          backface-visibility: visible;
+          perspective: 1000;
+        }
+        .hover-line{
+          width: 100%;
+        }
+      }
+    }
+
+  }
+}
+
+//底部
+.index-footer{
+  height: 100px;
+  margin-top: 100px;
+  @media (max-width: 768px) {
+    margin-top: 80px;
+  }
+  background-color: #2e2e2e;
+  clear: both;
+
+  .icon-intro{
+    position: relative;
+    .f-icon-div{
+      position: absolute;
+      background-color: #eee;
+      padding: 15px;
+      top: -155px;
+      font-size: 15px;
+      img{
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+      }
+      span{
+        margin-top: 10px;
+        display: inline-block;
+      }
+      .box-arrow{
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 40%;
+        border-color: transparent;
+        border-style: solid;
+        z-index: 1061;
+        /* display: none; */
+        bottom: -10px;
+        right: 0;
+        margin-top: -10px;
+        border-width: 10px 10px 0 10px;
+        border-top-color: #eee;
+      }
+    }
+    .f-icon-wb{
+      left: -75px;
+      display: none;
+    }
+    .f-icon-wx{
+      left: -75px;
+      display: none;
+    }
+    .f-icon-qq{
+      left: -70px;
+      display: none;
+    }
+  }
+  .footer-icon{
+    text-align: center;
+    padding-top: 30px;
+    color: #fff;
+    font-size: 20px;
+    .icon-wb{
+      &:hover{
+        text-decoration: none;
+        .f-icon-wb{
+          display: block;
+        }
+      }
+    }
+    .icon-wx{
+      &:hover{
+        text-decoration: none;
+        .f-icon-wx{
+          display: block;
+        }
+      }
+    }
+    .icon-qq{
+      &:hover{
+        text-decoration: none;
+        .f-icon-qq{
+          display: block;
+        }
+      }
+    }
+  }
+  .footer-msg{
+    text-align: center;
+    padding: 30px 0;
+    color: #fff;
+    border-bottom: 1px solid #e3e8ec;
+  }
+  .footer-beian{
+    text-align: center;
+    margin-top: 10px;
+    color: #5e5e5e;
+  }
+}
+//
+//@keyframes myfirst
+//{
+//  from {width: 0;}
+//  to {width: 100%;}
+//}
+//
+//@-moz-keyframes myfirst /* Firefox */
+//{
+//  from {width: 0;}
+//  to {width: 100%;}
+//}
+//
+//@-webkit-keyframes myfirst /* Safari and Chrome */
+//{
+//  from {width: 0;}
+//  to {width: 100%;}
+//}
+//
+//@-o-keyframes myfirst /* Opera */
+//{
+//  from {width: 0;}
+//  to {width: 100%;}
+//}

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>问答</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta http-equiv="Pragma" contect="no-cache">
+    <meta name = "format-detection" content = "telephone=no">
+
+    <link href="../src/assets/style/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../src/assets/style/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="../src/assets/style/css/main.min.css" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+    <script src="../src/assets/script/libs/html5shiv.js"></script>
+    <script src="../src/assets/script/libs/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="index-header">
+    <div class="container">
+        <div class="hidden-xs">
+            <nav class="navbar navbar-inverse imooc-nav" role="navigation">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <img src="../src/assets/img/common/logo.png" alt="" class="imooc-logo">
+                        <ul class="nav navbar-nav nav-imooc-item">
+                            <li class="active"><a href="index.html">首页</a></li>
+                            <li><a href="page-content.html">课程</a></li>
+                            <li><a href="page-ask.html">问答</a></li>
+                            <li><a href="page-note.html">手记</a></li>
+                        </ul>
+                        <div class="imooc-right-login clearfix">
+                            <span class="imooc-login"><span class="login-text">登录</span></span>
+                            <span class="login-out">退出</span>
+                            <div class="user-msg-item">
+                                <ul>
+                                    <li><a href="#personal">个人设置</a></li>
+                                    <li><a href="#password">密码设置</a></li>
+                                    <li><a href="#myAnswer">我的回答</a></li>
+                                    <li><a href="#myAsk">我的提问</a></li>
+                                    <li><a href="#myNote">我的手记</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="visible-xs">
+            <span class="imooc-hideNav"><i class="glyphicon glyphicon-align-justify" aria-hidden="true"></i>&nbsp;<img src="../src/assets/img/common/logo.png" alt="" class="imooc-logo-xs"></span>
+            <div class="imooc-right-login clearfix">
+                <span class="imooc-login"><span class="login-text">登录</span></span>
+                <span class="login-out">退出</span>
+                <div class="user-msg-item">
+                    <ul>
+                        <li><a href="#personal">个人设置</a></li>
+                        <li><a href="#password">密码设置</a></li>
+                        <li><a href="#myAnswer">我的回答</a></li>
+                        <li><a href="#myAsk">我的提问</a></li>
+                        <li><a href="#myNote">我的手记</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="imooc-left-nav">
+                <ul class="left-nav-item">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="page-content.html">课程</a></li>
+                    <li><a href="page-ask.html">问答</a></li>
+                    <li><a href="page-note.html">手记</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-ask">
+    <div class="container">
+        <div class="row">
+            <div class="ask-title col-lg-9 col-md-9 col-xs-12 col-sm-12">
+                <div class="ask-tltie-content col-lg-2 col-md-2 col-sm-3 col-xs-6 hidden-xs">
+                    问答社区
+                </div>
+                <div class="ask-tltie-btn col-lg-2 col-md-2 col-sm-3 col-xs-12 pull-right">
+                    <a class="title-btn-ask">我要提问</a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-xs-12 col-sm-12">
+                <div class="ask-nav-tabs">
+                    <ul class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                        <li class="col-lg-2 col-md-3 col-sm-2 col-xs-4 border-f63" data-msg="new">最新</li>
+                        <li class="col-lg-2 col-md-3 col-sm-2 col-xs-4" data-msg="wait">等待回答</li>
+                        <li class="col-lg-2 col-md-3 col-sm-2 col-xs-4" data-msg="finish">已回答</li>
+                    </ul>
+                </div>
+                <div class="ask-question-list"></div>
+                <div class="page-pagination">
+                    <ul class="pagination">
+                        <li><span class="page-pre btn-disable">上一页</span></li>
+                        <li><span class="page-now">第 &nbsp;<span class="page-cur">1</span>&nbsp; 页</span></li>
+                        <li><span class="page-next">下一页</span></li>
+                        <li><span class="page-now">共 <span class="page-total">1</span> 页</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 hidden-xs hidden-sm">
+                <div class="ask-affirm">
+                    <div class="affirm-title">
+                        问答需知：
+                    </div>
+                    <ol>
+                        <li>登陆才能提问或者回答问题哦~</li>
+                        <li>请精确表述您的问题，这样小伙伴才能为你解答哦~</li>
+                        <li>为了保证更好的学习环境，请不要提与学习无关的课题哦~</li>
+                        <li>发布小广告等一切宣传性质内容的会被清除哦~</li>
+                        <li>为了内容的丰富以及回答的集中，请不要多次提问相同的问题~</li>
+                        <li>提问前可先查看是否有相同问题，这样可以更有效的找到答案啦~</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="index-footer">
+    <div class="container">
+        <p class="footer-icon">
+            <a href="javascript:void(0);" class="icon-wb">
+                <i class="fa fa-weibo" aria-hidden="true"></i>
+                <span class="icon-intro">
+                    <span class="f-icon-div f-icon-wb">
+                         <img src="../src/assets/img/common/weibo.jpg" alt=""><br>
+                         <span>扫码关注微博</span>
+                         <span class="box-arrow"></span>
+                    </span>
+                </span>
+            </a>&nbsp;&nbsp;
+            <a href="javascript:void(0);" class="icon-wx">
+                <i class="fa fa-weixin" aria-hidden="true"></i>
+                <span class="icon-intro">
+                    <span class="f-icon-div f-icon-wx">
+                         <img src="../src/assets/img/common/weibo.jpg" alt=""><br>
+                         <span>扫码关注微信</span>
+                         <span class="box-arrow"></span>
+                    </span>
+                </span>
+            </a>&nbsp;&nbsp;
+            <a href="javascript:void(0);" class="icon-qq">
+                <i class="fa fa-qq" aria-hidden="true"></i>
+                <span class="icon-intro">
+                    <span class="f-icon-div f-icon-qq">
+                         <img src="../src/assets/img/common/weibo.jpg" alt=""><br>
+                         <span>扫码关注QQ</span>
+                         <span class="box-arrow"></span>
+                    </span>
+                </span>
+            </a>
+        </p>
+        <p class="footer-beian">©&nbsp;2016&nbsp;mooc.com&nbsp;&nbsp;京ICP备 13046642号-2</p>
+    </div>
+</div>
+
+<!--登录注册-->
+<div class="imooc-login-mask"></div>
+<div class="imooc-login-box">
+    <div class="container">
+        <div class="row">
+            <div class="form-order col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 col-xs-12">
+                <div class="form-group">
+                    <div class="input-form-input form-login">
+                        <span class="form-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+                        <div class="login-choose">
+                            <span class="login-options">登录</span><span class="register-options">注册</span>
+                        </div>
+                        <div class="formLogin">
+                            <input type="text" class="form-control login-input input-name" placeholder="请输入用户名" id="username" name="username">
+                            <p class="error-remind-username"></p>
+                            <input type="password" class="form-control login-input input-pass" placeholder="请输入密码" id="pass" name="password">
+                            <p class="error-remind-pass"></p>
+                            <div class="imooc-btn-login">
+                                <input class="btn-login" type="submit" name="submit" id="onsubmit" value="登陆" />
+                            </div>
+                        </div>
+                        <div class="formRegis">
+                            <input type="text" class="form-control login-input input-name" placeholder="请输入用户名" id="getusername" name="username">
+                            <p class="error-remind-username"></p>
+                            <input type="password" class="form-control login-input input-pass" placeholder="请输入密码" id="getpass" name="password">
+                            <p class="error-remind-pass"></p>
+                            <input type="password" class="form-control login-input input-repass" placeholder="请确认密码" id="getrepass" name="confirm">
+                            <p class="error-remind-content"></p>
+                            <div class="imooc-btn-login">
+                                <input class="btn-login" type="submit" name="submit" id="getsubmit" value="注册" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="delcfmModel">
+    <div class="modal-dialog">
+        <div class="modal-content message_align">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">提示信息</h4>
+            </div>
+            <div class="modal-body">
+                <p>您确认要退出登录吗？</p>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" id="url"/>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <a class="btn btn-warning btn-loginout" data-dismiss="modal">确定</a>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="../src/assets/script/libs/jquery-3.1.0.min.js"></script>
+<script src="../src/assets/script/libs/bootstrap.min.js"></script>
+<script src="../src/assets/script/js/min/main.min.js"></script>
+<script src="../src/assets/script/js/min/login.min.js"></script>
+<script src="../src/assets/script/js/min/pagenation.min.js"></script>
+<script src="../src/assets/script/js/min/page-ask.min.js"></script>
+</body>
+</html>
